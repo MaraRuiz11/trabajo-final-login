@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0,0,0.3)
+    
+}
+
+.container-form {
+    flex: 1;
+    padding: 40px;
+    transition: all 0.3s ease;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-form.hidden {
+    display: none;
+}
+
+.container-form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.container-form h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sign-in h2,
+.sign-up h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-networks {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.social-networks ion-icon {
+    font-size: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.container-form span{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.social-networks ion-icon:hover {
+    background: #0000ff;
+    color: white;
+    border-color: #0000ff;
+}
+
+.container-input {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+    font-size: 25px
+}
+
+.container-input ion-icon {
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    font-size: 20px;
+    color: #666;  
+}
+
+
+
+.container-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    
+}
+
+.container-input input {
+    width: 100%;
+    padding: 12px 12px 12px 45px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+
+.container-input input:focus {
+    border-color: #0000ff;
+}
+
+span {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    width: 170px;
+    padding: 15px;
+    background: #0000ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: blue;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #0000cc;
+}
+
+.container-welcome {
+    flex: 1;
+    background: linear-gradient(135deg, #0000ff, #0000aa);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    border-radius: 50% 0 0 50%;
+}
+
+.welcome-sign-up h3,
+.welcome-sign-in h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.welcome-sign-up p,
+.welcome-sign-in p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.welcome-sign-up button,
+.welcome-sign-in button {
+    padding: 12px 40px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+.welcome-sign-up button:hover,
+.welcome-sign-in button:hover {
+    background: white;
+    color: #0000ff;
+}
+
+/* Botón de cambio móvil */
+.mobile-toggle {
+    display: none;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: #0000ff;
+    border: 2px solid #0000ff;
+    border-radius: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: all 0.3s;
+}
+
+.mobile-toggle:hover {
+    background: #0000ff;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 480px){
+    .container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .container-welcome {
+        display: none;
+    }
+
+    .container-form {
+        padding: 30px 40px;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .container-form.sign-in.hidden,
+    .container-form.sign-up.hidden {
+        display: none;
+    }
+    
+}
